@@ -1,0 +1,23 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  git-lopper:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04-arm, macos-latest, macos-26-intel]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
+      - run: brew install albertovincenzi/tap/git-lopper
+      - run: brew test albertovincenzi/tap/git-lopper
+      - run: brew audit --strict albertovincenzi/tap/git-lopper
