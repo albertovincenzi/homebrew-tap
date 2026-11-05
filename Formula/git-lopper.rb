@@ -5,21 +5,21 @@
 class GitLopper < Formula
   desc "Find stale git worktrees in all your repositories and remove them safely"
   homepage "https://github.com/albertovincenzi/git-lopper"
-  version "2.1.0"
+  version "2.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/albertovincenzi/git-lopper/releases/download/v2.1.0/git-lopper_2.1.0_darwin_amd64.tar.gz"
-      sha256 "c2c5122855b4e620c7b64f4674c3b2114624c2ec37c6144e70a6a9e0cab60533"
+      url "https://github.com/albertovincenzi/git-lopper/releases/download/v2.2.0/git-lopper_2.2.0_darwin_amd64.tar.gz"
+      sha256 "11821afdb0547dcc6c0ae260a34d43457898194aef462627eb0dae1ffd70bdbf"
 
       define_method(:install) do
         bin.install "git-lopper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/albertovincenzi/git-lopper/releases/download/v2.1.0/git-lopper_2.1.0_darwin_arm64.tar.gz"
-      sha256 "2c95737fed98ff066ecf1665f643129d76d510b56ebfc8f42216f827aba67601"
+      url "https://github.com/albertovincenzi/git-lopper/releases/download/v2.2.0/git-lopper_2.2.0_darwin_arm64.tar.gz"
+      sha256 "6c5a96768484b0f3aaf74d8364450682c9962a252a8090bae60d96512135b751"
 
       define_method(:install) do
         bin.install "git-lopper"
@@ -29,15 +29,15 @@ class GitLopper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/albertovincenzi/git-lopper/releases/download/v2.1.0/git-lopper_2.1.0_linux_amd64.tar.gz"
-      sha256 "0cdde406a11af53c8d42622463b8f8b5a798de152d099bb3d8480838d2ff3b57"
+      url "https://github.com/albertovincenzi/git-lopper/releases/download/v2.2.0/git-lopper_2.2.0_linux_amd64.tar.gz"
+      sha256 "1698ce48c6417c1fdb509a8fab94f3ff379a95f735e7d498746dadeb64636b6d"
       define_method(:install) do
         bin.install "git-lopper"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/albertovincenzi/git-lopper/releases/download/v2.1.0/git-lopper_2.1.0_linux_arm64.tar.gz"
-      sha256 "d68dea8f9ba2e6138b4d50b83df31f698dc1112170a7d8f3750255bd393aa99c"
+      url "https://github.com/albertovincenzi/git-lopper/releases/download/v2.2.0/git-lopper_2.2.0_linux_arm64.tar.gz"
+      sha256 "e8c3e451e5160f6be58656147f3764643b9db69b09a8a6f546d4c0438b0b900f"
       define_method(:install) do
         bin.install "git-lopper"
       end
