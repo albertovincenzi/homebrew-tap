@@ -20,4 +20,5 @@ jobs:
       - uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
       - run: brew install albertovincenzi/tap/git-lopper
       - run: brew test albertovincenzi/tap/git-lopper
-      - run: brew audit --strict albertovincenzi/tap/git-lopper
+      # not brew audit: GoReleaser always writes `version`, which audit calls redundant
+      - run: brew style albertovincenzi/tap
