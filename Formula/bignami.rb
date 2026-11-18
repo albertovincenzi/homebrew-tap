@@ -5,21 +5,21 @@
 class Bignami < Formula
   desc "A TUI cheat sheet for forgetful devs: AWS and Kubernetes commands with live output"
   homepage "https://github.com/albertovincenzi/bignami"
-  version "0.1.2"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/albertovincenzi/bignami/releases/download/v0.1.2/bignami_0.1.2_darwin_amd64.tar.gz"
-      sha256 "f78a0b536a76497c91badba05ffaf244621da37c48dc300cc8488c2fb0ac786c"
+      url "https://github.com/albertovincenzi/bignami/releases/download/v0.2.0/bignami_0.2.0_darwin_amd64.tar.gz"
+      sha256 "3dc2663458a95d3bb1006f0783228a732a21acf883ce559f60b9ab9663ceb738"
 
       define_method(:install) do
         bin.install "bignami"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/albertovincenzi/bignami/releases/download/v0.1.2/bignami_0.1.2_darwin_arm64.tar.gz"
-      sha256 "d82ca0e5983888fbf1042ced42116e282e64663ab7bf925074b12986a724be4d"
+      url "https://github.com/albertovincenzi/bignami/releases/download/v0.2.0/bignami_0.2.0_darwin_arm64.tar.gz"
+      sha256 "f5ece58d5a616c4546e7a641a016a2d173843ebf19da1e47dabaf683bee614a0"
 
       define_method(:install) do
         bin.install "bignami"
@@ -29,15 +29,15 @@ class Bignami < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/albertovincenzi/bignami/releases/download/v0.1.2/bignami_0.1.2_linux_amd64.tar.gz"
-      sha256 "a034038eec9cc029e00c6be6854e4a63ba1ac6aecd9c9971b2f8d7cd3ef9f0a2"
+      url "https://github.com/albertovincenzi/bignami/releases/download/v0.2.0/bignami_0.2.0_linux_amd64.tar.gz"
+      sha256 "7d7fb8a7f6e99d02bbdb35ea34b8d89aa1782a0a6144f7aaf8f867fdc601dfed"
       define_method(:install) do
         bin.install "bignami"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/albertovincenzi/bignami/releases/download/v0.1.2/bignami_0.1.2_linux_arm64.tar.gz"
-      sha256 "42956e3937b2169725190379e8d0af48d42b42a3bb27275e21ae482ba8af61b2"
+      url "https://github.com/albertovincenzi/bignami/releases/download/v0.2.0/bignami_0.2.0_linux_arm64.tar.gz"
+      sha256 "06ef7d0e2e3ac4aeec99e444a00cb060d72782ee1fc9b833164ab70ff7a704ef"
       define_method(:install) do
         bin.install "bignami"
       end
